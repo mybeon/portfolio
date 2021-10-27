@@ -3,5 +3,21 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "My portfolio",
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: "images", path: `${__dirname}/src/images/` },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: ["Montserrat:300,400,500,600,700"],
+      },
+      display: "swap",
+    },
+  ],
 };
