@@ -11,14 +11,6 @@ exports.handler = async (e) => {
   let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   let alphaNumeric = /^[\w\-\s]+$/;
 
-  console.log(e);
-  if (e.headers.host !== "localhost:8888") {
-    return {
-      statusCode: 400,
-      body: "not allowed",
-    };
-  }
-
   if (recaptcha === undefined || recaptcha === null || recaptcha === "") {
     return {
       statusCode: 401,

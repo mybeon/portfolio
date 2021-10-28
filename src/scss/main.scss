@@ -310,6 +310,7 @@ form {
     input,
     select,
     textarea {
+      -webkit-appearance: none;
       width: 100%;
       font-family: "Montserrat";
       height: 60px;
@@ -480,7 +481,7 @@ form {
       }
 
       .call-to-action {
-        width: 65%;
+        width: 210px;
         a {
           font-size: 1.4rem;
           height: 40px;
@@ -497,17 +498,28 @@ form {
   }
 
   .services-section {
+    margin-top: 12rem;
     h3 {
       margin-bottom: 4rem;
     }
 
     .splide__pagination {
       top: 105%;
+
+      li {
+        button {
+          height: 6px;
+          width: 6px;
+        }
+        button.is-active {
+          background: rgba(0, 0, 0, 0.651);
+        }
+      }
     }
   }
 
   .porfolio-section {
-    margin-top: 10rem;
+    margin-top: 12rem;
   }
 
   .nb {
@@ -518,7 +530,7 @@ form {
 
   form {
     .input-container {
-      width: 350px;
+      width: calc(100% - 40px);
       label {
         font-size: 1.4rem;
       }
@@ -529,7 +541,7 @@ form {
 
       &.textarea-container,
       &:last-child {
-        width: 350px;
+        width: calc(100% - 40px);
       }
     }
   }
