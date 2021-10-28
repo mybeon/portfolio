@@ -164,6 +164,7 @@ exports.handler = async (e) => {
       
             .svg {
               height: 25px;
+              display: inline-block;
             }
       
             .svg img {
@@ -172,15 +173,10 @@ exports.handler = async (e) => {
       
             footer {
               border-top: 1px solid rgba(0, 0, 0, 0.151);
-              display: flex;
               width: 60%;
-              align-items: center;
-              gap: 10px;
-      
               margin: 0 auto;
               padding-top: 20px;
               margin-top: 60px;
-              justify-content: center;
             }
             small {
               font-size: 8px;
@@ -188,6 +184,11 @@ exports.handler = async (e) => {
               text-align: center;
               display: block;
               margin-top: 20px;
+            }
+
+            footer .container {
+              width: fit-content;
+              margin: 0 auto;
             }
       
             @media screen and (max-width: 350px) {
@@ -207,6 +208,7 @@ exports.handler = async (e) => {
             </p>
             <p>Best regards.</p>
             <footer>
+            <div class="container">
               <div class="svg">
                 <a href="https://github.com/mybeon" target="_blank" rel="noreferrer">
                   <img src="https://i.postimg.cc/BjmZfCWk/github.png" alt="" />
@@ -217,6 +219,7 @@ exports.handler = async (e) => {
                 <img src="https://i.postimg.cc/mzHTMfcW/link.png" alt="" />
                 </a>
               </div>
+            </div>
             </footer>
             <small>Copyright &copy; 2021. All Rights Reserved.</small>
           </main>
