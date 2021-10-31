@@ -106,20 +106,20 @@ const Form = () => {
           />
         </div>
         <div className="input-container">
-          <label htmlFor="inquery">inquery :</label>
+          <label htmlFor="inquiry">inquiry :</label>
           <select
-            name="inquery"
-            id="inquery"
+            name="inquiry"
+            id="inquiry"
             onChange={(e) => setInquery(e.target.value)}
           >
             <option value="">choose</option>
-            <option value="seo">seo</option>
-            <option value="audit">audit</option>
-            <option value="website">website</option>
+            <option value="seo audit">Seo audit</option>
+            <option value="website building">Website building</option>
+            <option value="website enhancement">Website enhancement</option>
           </select>
         </div>
         <div className="input-container textarea-container">
-          <label htmlFor="message">message :</label>
+          <label htmlFor="message">Details :</label>
           <textarea
             name="message"
             id="message"
@@ -151,7 +151,6 @@ const Form = () => {
             type="submit"
             style={{
               backgroundColor: submitState === "none" ? "#6c63ff" : "white",
-              opacity: submitState === "succes" ? "0.7" : "1",
             }}
           >
             {submitState === "none" ? (

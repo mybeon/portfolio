@@ -12,12 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: { name: "images", path: `${__dirname}/src/images/` },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: ["Montserrat:300,400,500,600,700"],
-      },
-      display: "swap",
-    },
+    `gatsby-plugin-preact`,
+    `gatsby-plugin-brotli`,
   ],
 };

@@ -109,7 +109,7 @@ exports.handler = async (e) => {
       From: ${email} </br>
       Full Name: ${fullname} </br>
       Company: ${company} </br>
-      Inquery: ${inquery} </br>
+      Inquiry: ${inquery} </br>
       Message: ${sanMessage}`,
     });
 
@@ -146,13 +146,13 @@ exports.handler = async (e) => {
       
             h1 {
               width: 60%;
-              font-size: 32px;
+              font-size: 28px;
               text-align: center;
               margin: 0 auto 40px auto;
             }
             p {
               width: 80%;
-              font-size: 14px;
+              font-size: 12px;
               font-weight: 300;
               margin: 0 auto 40px auto;
             }
