@@ -14,9 +14,8 @@ const IndexPage = () => {
         <div className="container">
           <h1>Designer, Front &amp; Back-End Developer</h1>
           <p>
-            I design and code beautifully simple things. Specialized in
-            WordPress custom theme development. If you're a business seeking a
-            web presence, you are in the perfect place.
+            I design and code beautifully simple things. Specialized in WordPress custom theme development. If you're a business seeking a web
+            presence, you are in the perfect place.
           </p>
           <div className="call-to-action">
             <a href="#portfolio">portfolio</a>
@@ -42,7 +41,7 @@ const IndexPage = () => {
             display: "block",
           }}
         >
-          Coryright &copy; 2021. Developed by me. All Rights Reserved.
+          Coryright &copy; {new Date().getFullYear()}. Developed by me. All Rights Reserved.
         </small>
       </footer>
     </main>
