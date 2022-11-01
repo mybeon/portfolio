@@ -57,45 +57,7 @@ const Projects = () => {
           </div>
           <p>A simple social media app with a chat feature built upon nodejs with express, ejs &amp; Mongodb as database.</p>
         </div>
-        <div className="single-project">
-          <StaticImage src="../images/projects/port-pod.png" height="100%" style={{ height: "100%" }} />
-          <a href="http://grid.freecluster.eu/" target="_blank" rel="noreferrer">
-            view website
-          </a>
-          <div className="techs">
-            <div className="container">
-              <img src={htmlSvg} alt="languages used" />
-            </div>
-            <div className="container">
-              <img src={cssSvg} alt="languages used" />
-            </div>
-            <div className="container">
-              <img src={phpSvg} alt="languages used" />
-            </div>
-            <div className="container">
-              <img src={javascriptSvg} alt="languages used" />
-            </div>
-          </div>
-          <p>A wordpress theme live search using ajax &amp; a custom dashbord where user can submit his personal notes.</p>
-        </div>
-        <div className="single-project">
-          <StaticImage src="../images/projects/port-ecom.png" height="100%" style={{ height: "100%" }} />
-          <a href="http://ecomtheme.rf.gd/" target="_blank" rel="noreferrer">
-            view website
-          </a>
-          <div className="techs">
-            <div className="container">
-              <img src={htmlSvg} alt="languages used" />
-            </div>
-            <div className="container">
-              <img src={cssSvg} alt="languages used" />
-            </div>
-            <div className="container">
-              <img src={phpSvg} alt="languages used" />
-            </div>
-          </div>
-          <p>An E-commerce WordPress theme 100% percent compatible with the unopinionated Woocommerce plugin.</p>
-        </div>
+
         <div className="single-project">
           <StaticImage src="../images/projects/port-weather.png" height="100%" style={{ height: "100%" }} />
           <a href="https://weather-app-gb.netlify.app" target="_blank" rel="noreferrer">
