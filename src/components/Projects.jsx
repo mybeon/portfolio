@@ -20,7 +20,7 @@ const Projects = () => {
       <div className="projects">
         <div className="single-project">
           <StaticImage src="../images/projects/port-react.png" height="100%" style={{ height: "100%" }} />
-          <a href="https://capp-react.netlify.app/" target="_blank" rel="noreferrer">
+          <a href="https://nodejs-backend-js.onrender.com/" target="_blank" rel="noreferrer">
             view website
           </a>
           <div className="techs">
