@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import MainSlider from "../components/slider/MainSlider";
 import "../scss/main.scss";
 import heroSvg from "../images/hero_svg.svg";
@@ -6,7 +7,7 @@ import Projects from "../components/Projects";
 import Form from "../components/Form";
 import Seo from "../components/Seo";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <main>
       <Seo title="Welcome to my portfolio" />
@@ -31,7 +32,7 @@ const IndexPage = () => {
         </h3>
         <MainSlider />
       </div>
-      <Projects />
+      <Projects images={data.allFile.edges} />
       <Form />
       <footer>
         <small
@@ -41,11 +42,26 @@ const IndexPage = () => {
             display: "block",
           }}
         >
-          Coryright &copy; {new Date().getFullYear()}. Developed by me. All Rights Reserved.
+          Copyright &copy; {new Date().getFullYear()}. Developed by me. All Rights Reserved.
         </small>
       </footer>
     </main>
   );
 };
+
+export const imagesQuery = graphql`
+  query imagesQuery {
+    allFile(filter: { ext: { eq: ".png" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData
+          }
+          name
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
