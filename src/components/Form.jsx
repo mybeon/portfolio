@@ -17,17 +17,11 @@ const Form = () => {
     setError([]);
     e.preventDefault();
 
-    if (
-      email.trim() === "" ||
-      company.trim() === "" ||
-      fullname.trim() === "" ||
-      inquery.trim() === "" ||
-      message.trim() === ""
-    ) {
+    if (email.trim() === "" || company.trim() === "" || fullname.trim() === "" || inquery.trim() === "" || message.trim() === "") {
       setError((prevErr) => [...prevErr, "All fields are required"]);
       return;
     }
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let regexEmail = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
     if (!email.match(regexEmail)) {
       setError((prevErr) => [...prevErr, "Must enter a valid email."]);
       return;
@@ -77,41 +71,19 @@ const Form = () => {
       <form onSubmit={(e) => handleSubmit(e)} noValidate>
         <div className="input-container">
           <label htmlFor="email">email :</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="type your email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <input type="email" name="email" id="email" placeholder="type your email" onChange={(e) => setEmail(e.target.value)} />
         </div>
         <div className="input-container">
           <label htmlFor="company">company :</label>
-          <input
-            type="text"
-            name="company"
-            id="company"
-            placeholder="name of your company"
-            onChange={(e) => setCompany(e.target.value)}
-          />
+          <input type="text" name="company" id="company" placeholder="name of your company" onChange={(e) => setCompany(e.target.value)} />
         </div>
         <div className="input-container">
           <label htmlFor="fullname">full name :</label>
-          <input
-            type="text"
-            name="fullname"
-            id="fullname"
-            placeholder="your full name"
-            onChange={(e) => setFullname(e.target.value)}
-          />
+          <input type="text" name="fullname" id="fullname" placeholder="your full name" onChange={(e) => setFullname(e.target.value)} />
         </div>
         <div className="input-container">
           <label htmlFor="inquiry">inquiry :</label>
-          <select
-            name="inquiry"
-            id="inquiry"
-            onChange={(e) => setInquery(e.target.value)}
-          >
+          <select name="inquiry" id="inquiry" onChange={(e) => setInquery(e.target.value)}>
             <option value="">choose</option>
             <option value="seo audit">Seo audit</option>
             <option value="website building">Website building</option>
@@ -129,10 +101,7 @@ const Form = () => {
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
         </div>
-        <div
-          className="input-container textarea-container"
-          style={{ display: submitState === "succes" ? "none" : "block" }}
-        >
+        <div className="input-container textarea-container" style={{ display: submitState === "succes" ? "none" : "block" }}>
           <ReCAPTCHA
             sitekey="6LctUPIcAAAAADCQhdHyttE6rU8S8efOJSpeBik5"
             onChange={(value) => {
@@ -143,23 +112,13 @@ const Form = () => {
 
         <div className="input-container">
           <button
-            disabled={
-              submitState === "loading" || submitState === "succes"
-                ? true
-                : false
-            }
+            disabled={submitState === "loading" || submitState === "succes" ? true : false}
             type="submit"
             style={{
               backgroundColor: submitState === "none" ? "#6c63ff" : "white",
             }}
           >
-            {submitState === "none" ? (
-              "submit"
-            ) : submitState === "loading" ? (
-              <Loader />
-            ) : (
-              <Succes />
-            )}
+            {submitState === "none" ? "submit" : submitState === "loading" ? <Loader /> : <Succes />}
           </button>
         </div>
       </form>
