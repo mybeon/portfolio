@@ -7,8 +7,18 @@ import gatsbySvg from "../images/techs/gatsby.svg";
 import mongoSvg from "../images/techs/mongodb.svg";
 import ejsSvg from "../images/techs/ejs.svg";
 import reactSvg from "../images/techs/react.svg";
+import reduxSvg from "../images/techs/redux.svg";
+import firebaseSvg from "../images/techs/firebase.svg";
+import cssModulesSvg from "../images/techs/cssModules.svg";
 
 const projects = [
+  {
+    id: 5,
+    image: "port-meals",
+    link: "https://react-meals-redux-firebase.netlify.app/",
+    techs: [reactSvg, reduxSvg, firebaseSvg, cssModulesSvg, javascriptSvg],
+    description: "A simple MealsApp with cart functionality built using redux and firebase authentication/firestore.",
+  },
   {
     id: 1,
     image: "port-react",

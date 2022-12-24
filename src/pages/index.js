@@ -6,6 +6,7 @@ import heroSvg from "../images/hero_svg.svg";
 import Projects from "../components/Projects";
 import Form from "../components/Form";
 import Seo from "../components/Seo";
+import Footer from "../components/Footer";
 
 const IndexPage = ({ data }) => {
   return (
@@ -34,17 +35,7 @@ const IndexPage = ({ data }) => {
       </div>
       <Projects images={data.allFile.edges} />
       <Form />
-      <footer>
-        <small
-          style={{
-            textAlign: "center",
-            margin: "6rem 0 2rem 0",
-            display: "block",
-          }}
-        >
-          Copyright &copy; {new Date().getFullYear()}. Developed by me. All Rights Reserved.
-        </small>
-      </footer>
+      <Footer />
     </main>
   );
 };
