@@ -10,8 +10,18 @@ import reactSvg from "../images/techs/react.svg";
 import reduxSvg from "../images/techs/redux.svg";
 import firebaseSvg from "../images/techs/firebase.svg";
 import cssModulesSvg from "../images/techs/cssModules.svg";
+import typeSvg from "../images/techs/typescript.svg";
+import mkSvg from "../images/techs/markdown.svg";
+import nextSvg from "../images/techs/nextjs.svg";
 
 const projects = [
+  {
+    id: 6,
+    image: "port-nextauth",
+    link: "https://nextjs-nextauth-mongodb.vercel.app",
+    techs: [nextSvg, typeSvg, mkSvg, mongoSvg, nodeSvg],
+    description: "A Nextjs blog enhanced with an authentication flow using next-auth and mongodb",
+  },
   {
     id: 5,
     image: "port-meals",
@@ -20,28 +30,28 @@ const projects = [
     description: "A simple MealsApp with cart functionality built using redux and firebase authentication/firestore.",
   },
   {
-    id: 1,
+    id: 4,
     image: "port-react",
     link: "https://capp-react.netlify.app/",
     techs: [javascriptSvg, reactSvg, nodeSvg],
     description: "A react-app version of the existing social media project. Contains a chat and a search feature as well.",
   },
   {
-    id: 2,
+    id: 3,
     image: "port-fullstack",
     link: "https://nodejs-backend-js.onrender.com/",
     techs: [javascriptSvg, mongoSvg, ejsSvg, nodeSvg],
     description: "A simple social media app with a chat feature built upon nodejs with express, ejs &amp; Mongodb as database.",
   },
   {
-    id: 3,
+    id: 2,
     image: "port-weather",
     link: "https://weather-app-gb.netlify.app",
     techs: [htmlSvg, cssSvg, javascriptSvg, nodeSvg, gatsbySvg],
     description: "Weather app that displays daily and hourly forecast based on the user's location.",
   },
   {
-    id: 4,
+    id: 1,
     image: "port-bauen",
     link: "http://wptheme.rf.gd/",
     techs: [htmlSvg, cssSvg, phpSvg],
