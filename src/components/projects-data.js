@@ -14,8 +14,18 @@ import typeSvg from "../images/techs/typescript.svg";
 import mkSvg from "../images/techs/markdown.svg";
 import nextSvg from "../images/techs/nextjs.svg";
 import reactNativeSvg from "../images/techs/react-native.svg";
+import electronSVg from "../images/techs/electron.svg";
+import viteSvg from "../images/techs/vite.svg";
 
 const projects = [
+    {
+        id: 8,
+        image: "port-clipboard",
+        link: "https://github.com/mybeon/clipboard#readme",
+        techs: [electronSVg, viteSvg, typeSvg, nodeSvg],
+        description:
+            "A straightforward clipboard manager designed for efficiency and simplicity on DEB linux systems.",
+    },
     {
         id: 7,
         image: "port-notifyapp",
